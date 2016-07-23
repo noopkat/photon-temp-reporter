@@ -1,0 +1,15 @@
+{
+  "name": "photon-temp",
+  "version": "1.0.0",
+  "description": "what is the temp in my study?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Suz Hinton",
+  "license": "MIT",
+  "dependencies": {
+    "particle-api-js": "^5.3.0",
+    "socket.io": "^1.4.8"
+  }
+}

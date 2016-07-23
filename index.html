@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>it's something</title>
+    <style>
+      body {
+        font-size: 50px;
+        font-family: sans-serif;
+        padding-left: 30px;
+        padding-top: 30px;
+      }
+
+      h1 {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="temp"></h1>
+    <script type="text/javascript" src="socket.io.js"></script>
+    <script>
+      var content = document.getElementById('temp');
+      var socket = io(window.location.origin + ':8080');
+      console.log('connected!');
+      socket.on('temperature!', function(data) {
+        content.innerHTML = data.data + '&deg;c';
+      });
+    </script>
+  </body>
+</html>
