@@ -8,8 +8,8 @@ void setup() {
 }
 
 int convertTemp(int i) {
-  float voltage =  i * (3300 / 1024);
-  int temperatureC = floor((voltage - 500) / 100);
+  float voltage =  i * (3300.0 / 1024.0);
+  int temperatureC = ceil((voltage - 500.0) / 100.0);
   return temperatureC;
 }
 
